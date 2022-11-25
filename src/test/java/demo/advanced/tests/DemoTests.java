@@ -31,7 +31,7 @@ public class DemoTests extends BaseTest {
 		// System.out.println("Passed Test 1");
 	}
 
-	@Test(/*retryAnalyzer = CustomRetry.class, */priority = 1, groups = TestGroups.DemoGroup)
+	@Test(retryAnalyzer = CustomRetry.class, priority = 1, groups = TestGroups.DemoGroup)
 	public void ATest2() {
 		System.out.println("Executing Test 2");
 
