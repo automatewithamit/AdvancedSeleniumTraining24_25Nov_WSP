@@ -6,8 +6,8 @@ import java.util.TreeMap;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import demo.advanced.data.*;
-import demo.advanced.framework.CustomListener;
+
+import demo.advanced.data.TestGroups;
 import demo.advanced.helpers.ExcelHelper;
 
 public class AmazonTest extends BaseTest {
@@ -23,14 +23,14 @@ public class AmazonTest extends BaseTest {
 		Assert.assertTrue(true);
 	}
 
-	@Test(groups = TestGroups.AmazonSearch)
+	@Test(groups = { TestGroups.AmazonSearch, TestGroups.Regression })
 	public void WriteMobileNamesInExcel() {
 		landingPage.search("Apple Mobiles");
 		Map<Integer, Object[]> data = new TreeMap<Integer, Object[]>();
 
 		Integer counter = 1;
 		for (String mobile : searchResultPage.getSearchResults()) {
-			data.put( counter , new Object[] { mobile });
+			data.put(counter, new Object[] { mobile });
 			counter++;
 		}
 		ExcelHelper.writeExcelData(data);

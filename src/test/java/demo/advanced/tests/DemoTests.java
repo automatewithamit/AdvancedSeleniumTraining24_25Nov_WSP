@@ -1,37 +1,53 @@
 package demo.advanced.tests;
 
-import java.util.*;
-import org.testng.Assert;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import java.util.Map;
+import java.util.TreeMap;
 
+import org.testng.Assert;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 import demo.advanced.data.TestGroups;
-import demo.advanced.framework.CustomListener;
+import demo.advanced.framework.CustomRetry;
 import demo.advanced.helpers.ExcelHelper;
 
 //@Listeners(CustomListener.class)
 public class DemoTests extends BaseTest {
 
-	@Test(priority = 1, groups = TestGroups.DemoGroup)
-	public void Test1() {
+	@Parameters({ "dataFromParameter" })
+	@Test(priority = 3, groups = TestGroups.DemoGroup, /*
+														 * dependsOnMethods = { "Best2" },
+														 */alwaysRun = true, /*
+																				 * dataProvider = "getConfiguration",
+																				 * dataProviderClass =
+																				 * DataProviders.class ,
+																				 */timeOut = 5000)
+	public void ZTest1(String parameter) {
 		System.out.println("Executing Test 1");
 		Assert.assertTrue(true);
-		System.out.println("Passed Test 1");
+		// System.out.println(configuration);
+		System.out.println("-------------------------");
+		System.out.println(parameter);
+
+		// System.out.println("Passed Test 1");
 	}
 
-	@Test(priority = 2, groups = TestGroups.DemoGroup)
-	public void Test2() {
+	@Test(/*retryAnalyzer = CustomRetry.class, */priority = 1, groups = TestGroups.DemoGroup)
+	public void ATest2() {
 		System.out.println("Executing Test 2");
+
+		int i = 10;
+		System.out.println(i);
+
 		Assert.assertTrue(true);
 		System.out.println("Passed Test 2");
 
 	}
 
-	@Test(priority = 3, groups = TestGroups.DemoGroup/*
+	@Test(priority = 2, groups = TestGroups.DemoGroup/*
 														 * , dataProvider = "getCustomerNameAgeData", dataProviderClass
 														 * = demo.advanced.data.DataProviders.class
 														 */)
-	public void Test3(/* Object[][] data */) {
+	public void BTest3(/* Object[][] data */) {
 		System.out.println("Executing Test 3");
 //		for (Object c : data) {
 //			System.out.println(c);

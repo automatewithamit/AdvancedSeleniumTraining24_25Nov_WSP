@@ -7,6 +7,7 @@ import java.lang.Object;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.*;
+import org.testng.annotations.DataProvider;
 
 public class ExcelHelper {
 
@@ -27,7 +28,7 @@ public class ExcelHelper {
 			int cellnum = 0;
 			for (Object obj : objArr) {
 				Cell cell = row.createCell(cellnum++);
-				
+
 				if (obj instanceof String)
 					cell.setCellValue((String) obj);
 				else if (obj instanceof Integer)
@@ -39,12 +40,14 @@ public class ExcelHelper {
 			FileOutputStream out = new FileOutputStream(new File("Mobiles.xlsx"));
 			workbook.write(out);
 			out.close();
-			System.out.println("Employee.xlsx written successfully on disk.");
+			System.out.println("Mobiles.xlsx written successfully on disk.");
 		} catch (Exception e) {
+			
+			System.out.println("Mobiles.xlsx Can not be written.");
 			e.printStackTrace();
 		}
 	}
-
+	
 	public void readExcelData() {
 		try {
 			FileInputStream file = new FileInputStream(new File("Mobiles.xlsx"));

@@ -42,15 +42,56 @@ public class BaseTest {
 		}
 	}
 
+	@BeforeSuite
+	public void BeforeSuite() {
+		System.out.println("Before Suite...");
+	}
+
+	@BeforeTest
+	public void BeforeTest() {
+		System.out.println("Before Test...");
+	}
+
+	@BeforeGroups
+	public void BeforeGroups() {
+		System.out.println("Before Groups...");
+	}
+
+	@BeforeClass
+	public void BeforeClass() {
+		System.out.println("Before Class...");
+	}
+
 	@BeforeMethod
 	public void BeforeMethod() {
 		new DriverManager().startDriver(driverProperty);
-		DriverManager.getDriver().navigate().to("https://www.amazon.in");
+		// DriverManager.getDriver().navigate().to("https://www.amazon.in");
+		System.out.println("Before Method..");
 	}
 
 	@AfterMethod
 	public void AfterMethod() {
 		DriverManager.getDriver().quit();
+		System.out.println("After Method..");
 	}
 
+	@AfterClass
+	public void AfterClass() {
+		System.out.println("After Class...");
+	}
+
+	@AfterGroups
+	public void AfterGroups() {
+		System.out.println("After Groups...");
+	}
+
+	@AfterTest
+	public void AfterTest() {
+		System.out.println("After Test...");
+	}
+
+	@AfterSuite
+	public void AfterSuite() {
+		System.out.println("After Suite...");
+	}
 }

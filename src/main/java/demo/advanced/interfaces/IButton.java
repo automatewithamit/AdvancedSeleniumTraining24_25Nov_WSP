@@ -1,8 +1,7 @@
 package demo.advanced.interfaces;
 
-public interface IButton {
+public interface IButton extends IClickable {
 
-	void Click();
 	public String GetText();
 
 }

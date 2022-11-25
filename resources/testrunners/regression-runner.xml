@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<!-- Suite -->
+<suite thread-count="1" name="Sanity-Test-Suite" parallel="tests">
+	
+	<test name="DemoTest" parallel="methods" thread-count="5">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="demo.advanced.tests.DemoTests"></class>
+			<class name="demo.advanced.tests.AmazonTest"></class>
+		</classes>
+	</test>
+
+	<parameter name="configuration" value="config.properties" />
+	<parameter name="retry" value="2" />
+
+</suite> 
