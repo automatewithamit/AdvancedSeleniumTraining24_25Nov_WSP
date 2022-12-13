@@ -19,6 +19,8 @@ public class Button implements IButton {
 		// wait.until(ExpectedConditions.elementToBeClickable(locator));
 		WebElement element = DriverManager.getDriver().findElement(locator);
 		element.click();
+		// wait
+		// Log"It has clicked"
 	}
 
 	public void Click(String clickType) {
