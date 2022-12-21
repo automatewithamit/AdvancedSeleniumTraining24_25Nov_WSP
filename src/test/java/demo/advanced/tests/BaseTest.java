@@ -65,7 +65,7 @@ public class BaseTest {
 	@BeforeMethod
 	public void BeforeMethod() {
 		new DriverManager().startDriver(driverProperty);
-		// DriverManager.getDriver().navigate().to("https://www.amazon.in");
+		DriverManager.getDriver().navigate().to("https://www.amazon.in");
 		System.out.println("Before Method..");
 	}
 

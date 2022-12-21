@@ -4,6 +4,7 @@ import java.util.*;
 import java.io.*;
 import java.lang.Object;
 
+import org.apache.poi.ss.formula.functions.Column;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.*;
@@ -42,21 +43,21 @@ public class ExcelHelper {
 			out.close();
 			System.out.println("Mobiles.xlsx written successfully on disk.");
 		} catch (Exception e) {
-			
+
 			System.out.println("Mobiles.xlsx Can not be written.");
 			e.printStackTrace();
 		}
 	}
-	
-	public void readExcelData() {
+
+	public static void readExcelData(String workBookPath, String sheetName, String webElementName) {
 		try {
-			FileInputStream file = new FileInputStream(new File("Mobiles.xlsx"));
+			FileInputStream file = new FileInputStream(new File(workBookPath));
 
 			// Create Workbook instance holding reference to .xlsx file
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
 
 			// Get first/desired sheet from the workbook
-			XSSFSheet sheet = workbook.getSheetAt(0);
+			XSSFSheet sheet = workbook.getSheet(sheetName);
 
 			// Iterate through each rows one by one
 			Iterator<Row> rowIterator = sheet.iterator();
@@ -70,7 +71,6 @@ public class ExcelHelper {
 					// Check the cell type and format accordingly
 					switch (cell.getCellType()) {
 					case Cell.CELL_TYPE_NUMERIC:
-
 						System.out.print(cell.getNumericCellValue() + "t");
 						break;
 					case Cell.CELL_TYPE_STRING:
@@ -78,12 +78,62 @@ public class ExcelHelper {
 						break;
 					}
 				}
-				System.out.println("");
 			}
 			file.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	public static String getXPathFromExcel(String workBookPath, String sheetName, String colName,
+			String webElementName) {
+		String xpath = "";
+		try {
+			FileInputStream file = new FileInputStream(new File(workBookPath));
+
+			// Create Workbook instance holding reference to .xlsx file
+			XSSFWorkbook workbook = new XSSFWorkbook(file);
+
+			// Get first/desired sheet from the workbook
+			int colNum = -1;
+			int rowNum = -1;
+			XSSFSheet sheet = workbook.getSheet(sheetName);
+			Row row;
+
+			// 1. column index of column where webelements name is stored : C or 2 : colNum
+			row = sheet.getRow(0);
+			for (int i = 0; i < row.getLastCellNum(); i++) {
+				if (row.getCell(i).getStringCellValue().trim().equals(colName.trim()))
+				{
+					colNum = i;
+					break;
+				}
+			}
+
+			// 2. get the index of webelement name in the column recieved from previous step
+			// [ which is in this case C or 2 ] colNum
+			// 3. we located the webelement name's cell [in this case its 2,2 (rowNum,
+			// colNum)]
+			for (int i = 0; i < sheet.getLastRowNum(); i++) {
+				row = sheet.getRow(i);
+
+				// find the cell index which have webElementName
+				for (int rowCounter = 0; rowCounter < row.getLastCellNum(); rowCounter++) {
+					if (row.getCell(rowCounter).getStringCellValue().trim().equals(webElementName.trim()))
+						rowNum = rowCounter;
+				}
+			}
+
+			// 4. we are going to get the value using using index in step 3 [which is
+			// (2,2+1) (rowNum, colNum+1) ]
+
+			xpath = sheet.getRow(rowNum).getCell(colNum + 1).getStringCellValue();
+
+			file.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return xpath;
 	}
 
 }

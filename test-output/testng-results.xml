@@ -1,111 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-02T12:31:40 IST" name="Sanity-Test-Suite" finished-at="2022-12-02T12:31:56 IST" duration-ms="15926">
+  <suite started-at="2022-12-17T11:34:50 IST" name="Default suite" finished-at="2022-12-17T11:35:23 IST" duration-ms="32739">
     <groups>
-      <group name="DemoGroup">
-        <method signature="DemoTests.ATest2()[pri:1, instance:demo.advanced.tests.DemoTests@1e6a3214]" name="ATest2" class="demo.advanced.tests.DemoTests"/>
-        <method signature="DemoTests.BTest3()[pri:2, instance:demo.advanced.tests.DemoTests@1e6a3214]" name="BTest3" class="demo.advanced.tests.DemoTests"/>
-        <method signature="DemoTests.Test4()[pri:4, instance:demo.advanced.tests.DemoTests@1e6a3214]" name="Test4" class="demo.advanced.tests.DemoTests"/>
-        <method signature="DemoTests.Test5()[pri:5, instance:demo.advanced.tests.DemoTests@1e6a3214]" name="Test5" class="demo.advanced.tests.DemoTests"/>
-        <method signature="DemoTests.ZTest1(java.lang.String)[pri:3, instance:demo.advanced.tests.DemoTests@1e6a3214]" name="ZTest1" class="demo.advanced.tests.DemoTests"/>
-      </group> <!-- DemoGroup -->
     </groups>
-    <test started-at="2022-12-02T12:31:40 IST" name="DemoTest" finished-at="2022-12-02T12:31:56 IST" duration-ms="15926">
-      <class name="demo.advanced.tests.DemoTests">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:40 IST" name="BeforeSuite" finished-at="2022-12-02T12:31:40 IST" duration-ms="14" status="PASS">
+    <test started-at="2022-12-17T11:34:50 IST" name="Default test" finished-at="2022-12-17T11:35:23 IST" duration-ms="32739">
+      <class name="demo.advanced.tests.AmazonSearchTests">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:34:50 IST" name="BeforeSuite" finished-at="2022-12-17T11:34:50 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:40 IST" name="BeforeTest" finished-at="2022-12-02T12:31:40 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:34:50 IST" name="BeforeTest" finished-at="2022-12-17T11:34:50 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:40 IST" name="BeforeClass" finished-at="2022-12-02T12:31:40 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:34:50 IST" name="BeforeClass" finished-at="2022-12-17T11:34:50 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:40 IST" name="BeforeMethod" finished-at="2022-12-02T12:31:51 IST" duration-ms="11700" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:34:50 IST" name="BeforeMethod" finished-at="2022-12-17T11:35:01 IST" duration-ms="10519" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:40 IST" name="BeforeMethod" finished-at="2022-12-02T12:31:51 IST" duration-ms="11475" status="PASS">
+        <test-method signature="ExcelXPathTest()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:01 IST" name="ExcelXPathTest" finished-at="2022-12-17T11:35:16 IST" duration-ms="14582" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExcelXPathTest -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:16 IST" name="AfterMethod" finished-at="2022-12-17T11:35:16 IST" duration-ms="863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:16 IST" name="BeforeMethod" finished-at="2022-12-17T11:35:21 IST" duration-ms="4568" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:40 IST" name="BeforeMethod" finished-at="2022-12-02T12:31:52 IST" duration-ms="12062" status="PASS">
+        <test-method signature="verifyCategories()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:21 IST" name="verifyCategories" finished-at="2022-12-17T11:35:23 IST" duration-ms="1575" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:40 IST" name="BeforeMethod" finished-at="2022-12-02T12:31:52 IST" duration-ms="11895" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:40 IST" name="BeforeMethod" finished-at="2022-12-02T12:31:52 IST" duration-ms="12661" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="BTest3()[pri:2, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:51 IST" name="BTest3" finished-at="2022-12-02T12:31:51 IST" duration-ms="16" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BTest3 -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:51 IST" name="AfterMethod" finished-at="2022-12-02T12:31:55 IST" duration-ms="3436" status="PASS">
+        </test-method> <!-- verifyCategories -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:23 IST" name="AfterMethod" finished-at="2022-12-17T11:35:23 IST" duration-ms="572" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterMethod -->
-        <test-method signature="ZTest1(java.lang.String)[pri:3, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:51 IST" name="ZTest1" finished-at="2022-12-02T12:31:51 IST" duration-ms="15" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Value of data from Parameter]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ZTest1 -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:51 IST" name="AfterMethod" finished-at="2022-12-02T12:31:56 IST" duration-ms="4161" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method signature="Test5()[pri:5, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:52 IST" name="Test5" finished-at="2022-12-02T12:31:54 IST" duration-ms="1901" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Test5 -->
-        <test-method signature="ATest2()[pri:1, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:52 IST" name="ATest2" finished-at="2022-12-02T12:31:52 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ATest2 -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:52 IST" name="AfterMethod" finished-at="2022-12-02T12:31:55 IST" duration-ms="3615" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method signature="Test4()[pri:4, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:52 IST" name="Test4" finished-at="2022-12-02T12:31:52 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Test4 -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:52 IST" name="AfterMethod" finished-at="2022-12-02T12:31:55 IST" duration-ms="2664" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:54 IST" name="AfterMethod" finished-at="2022-12-02T12:31:55 IST" duration-ms="1259" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:56 IST" name="AfterClass" finished-at="2022-12-02T12:31:56 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:23 IST" name="AfterClass" finished-at="2022-12-17T11:35:23 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:56 IST" name="AfterTest" finished-at="2022-12-02T12:31:56 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:23 IST" name="AfterTest" finished-at="2022-12-17T11:35:23 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSuite()[pri:0, instance:demo.advanced.tests.DemoTests@1e6a3214]" started-at="2022-12-02T12:31:56 IST" name="AfterSuite" finished-at="2022-12-02T12:31:56 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="AfterSuite()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:23 IST" name="AfterSuite" finished-at="2022-12-17T11:35:23 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterSuite -->
-      </class> <!-- demo.advanced.tests.DemoTests -->
-    </test> <!-- DemoTest -->
-  </suite> <!-- Sanity-Test-Suite -->
+      </class> <!-- demo.advanced.tests.AmazonSearchTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

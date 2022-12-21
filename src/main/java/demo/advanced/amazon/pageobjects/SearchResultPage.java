@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 import demo.advanced.webelements.Label;
 
-public class SearchResultPage {
+public class SearchResultPage extends BasePage {
 
 	public Label searchResult;
 
@@ -17,7 +17,7 @@ public class SearchResultPage {
 	}
 
 	public String firstSearchResultFromSearchedText() {
-		return searchResult.getText();
+		return  searchResult.getText();
 	}
 
 	public List<String> getSearchResults() {
