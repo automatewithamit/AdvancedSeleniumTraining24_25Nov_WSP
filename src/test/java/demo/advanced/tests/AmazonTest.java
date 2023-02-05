@@ -15,6 +15,8 @@ public class AmazonTest extends BaseTest {
 	@Test(groups = TestGroups.AmazonSearch)
 	public void AppleMobileSearch() {
 		try {
+			String username = "amit";
+			String pass = "automate";
 			String expectedText = "Apple iPhone";
 			landingPage.search("Apple Mobiles");
 			String actualSearchedResult = searchResultPage.firstSearchResultFromSearchedText();

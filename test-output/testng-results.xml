@@ -1,61 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-17T11:34:50 IST" name="Default suite" finished-at="2022-12-17T11:35:23 IST" duration-ms="32739">
+  <suite started-at="2023-02-03T17:40:36 IST" name="Default suite" finished-at="2023-02-03T17:40:39 IST" duration-ms="2983">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner@55a147cc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-12-17T11:34:50 IST" name="Default test" finished-at="2022-12-17T11:35:23 IST" duration-ms="32739">
-      <class name="demo.advanced.tests.AmazonSearchTests">
-        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:34:50 IST" name="BeforeSuite" finished-at="2022-12-17T11:34:50 IST" duration-ms="13" status="PASS">
+    <test started-at="2023-02-03T17:40:36 IST" name="Default test" finished-at="2023-02-03T17:40:39 IST" duration-ms="2983">
+      <class name="TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner@55a147cc]" started-at="2023-02-03T17:40:36 IST" name="setUpClass" finished-at="2023-02-03T17:40:37 IST" duration-ms="1036" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@783ec989]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeSuite -->
-        <test-method is-config="true" signature="BeforeTest()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:34:50 IST" name="BeforeTest" finished-at="2022-12-17T11:34:50 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner@55a147cc]" started-at="2023-02-03T17:40:37 IST" name="tearDownClass" finished-at="2023-02-03T17:40:39 IST" duration-ms="1910" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeTest -->
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:34:50 IST" name="BeforeClass" finished-at="2022-12-17T11:34:50 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:34:50 IST" name="BeforeMethod" finished-at="2022-12-17T11:35:01 IST" duration-ms="10519" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="ExcelXPathTest()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:01 IST" name="ExcelXPathTest" finished-at="2022-12-17T11:35:16 IST" duration-ms="14582" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ExcelXPathTest -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:16 IST" name="AfterMethod" finished-at="2022-12-17T11:35:16 IST" duration-ms="863" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:16 IST" name="BeforeMethod" finished-at="2022-12-17T11:35:21 IST" duration-ms="4568" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method signature="verifyCategories()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:21 IST" name="verifyCategories" finished-at="2022-12-17T11:35:23 IST" duration-ms="1575" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCategories -->
-        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:23 IST" name="AfterMethod" finished-at="2022-12-17T11:35:23 IST" duration-ms="572" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterMethod -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:23 IST" name="AfterClass" finished-at="2022-12-17T11:35:23 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method is-config="true" signature="AfterTest()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:23 IST" name="AfterTest" finished-at="2022-12-17T11:35:23 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterTest -->
-        <test-method is-config="true" signature="AfterSuite()[pri:0, instance:demo.advanced.tests.AmazonSearchTests@738dc9b]" started-at="2022-12-17T11:35:23 IST" name="AfterSuite" finished-at="2022-12-17T11:35:23 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterSuite -->
-      </class> <!-- demo.advanced.tests.AmazonSearchTests -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- TestRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

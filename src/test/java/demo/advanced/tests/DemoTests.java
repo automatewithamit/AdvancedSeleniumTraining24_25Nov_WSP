@@ -4,31 +4,31 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import demo.advanced.data.DataProviders;
 import demo.advanced.data.TestGroups;
 import demo.advanced.framework.CustomRetry;
 import demo.advanced.helpers.ExcelHelper;
 
-//@Listeners(CustomListener.class)
+@Listeners(demo.advanced.framework.CustomListener.class)
 public class DemoTests extends BaseTest {
 
 	@Parameters({ "dataFromParameter" })
-	@Test(priority = 3, groups = TestGroups.DemoGroup, /*
-														 * dependsOnMethods = { "Best2" },
-														 */alwaysRun = true, /*
-																				 * dataProvider = "getConfiguration",
-																				 * dataProviderClass =
-																				 * DataProviders.class ,
-																				 */timeOut = 5000)
+	@Test(priority = 3, groups = TestGroups.DemoGroup, 														 
+														 alwaysRun = true, 
+//																				 dataProvider = "getCustomerNameAgeData",
+//																				 dataProviderClass =
+//																				 DataProviders.class ,
+																				 timeOut = 5000)
 	public void ZTest1(String parameter) {
 		System.out.println("Executing Test 1");
 		Assert.assertTrue(true);
-		// System.out.println(configuration);
 		System.out.println("-------------------------");
 		System.out.println(parameter);
 
-		// System.out.println("Passed Test 1");
 	}
 
 	@Test(/* retryAnalyzer = CustomRetry.class, */ priority = 1, groups = TestGroups.DemoGroup)
