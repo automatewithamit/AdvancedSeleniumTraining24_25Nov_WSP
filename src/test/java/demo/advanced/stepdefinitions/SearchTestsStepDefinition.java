@@ -9,16 +9,7 @@ public class SearchTestsStepDefinition {
 	
 	BaseStepDefinition baseStep = new BaseStepDefinition();
 	
-	@Given("Admin is going to login using admin1")
-	public void admin_is_going_to_login_using() {
-		System.out.println(" admin_is_going_to_login_using admin credentials");
-	}
-
-	@Given("enter automate as Password")
-	public void enter_automate_as_password() {
-	  System.out.println("Entering the Password");
-	}
-
+	
 	@When("admin clicks Login")
 	public void admin_clicks_login() {
 		System.out.println("Admin Clicking on Login Button");
@@ -38,6 +29,22 @@ public class SearchTestsStepDefinition {
 	@Then("Login name should be as admin1")
 	public void login_name_should_be_as_admin1() {
 		System.out.println("Verfied that  login_name_should_be_as_admin1 ");
+	}
+	
+	@Given("Admin is going to login using {string}")
+	public void admin_is_going_to_login_using(String username) {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("Username " + username);
+	}
+	@Given("enter {string} as Password")
+	public void enter_as_password(String password) {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("Password " + password);
+	}
+	@Then("Login name should be as {string}")
+	public void login_name_should_be_as_admin2(String name) {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("Logged In User is  " + name);
 	}
 
 }

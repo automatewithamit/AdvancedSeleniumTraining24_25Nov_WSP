@@ -5,8 +5,8 @@
     <classes>
       <class name="demo.advanced.tests.DemoTests">
         <methods>
+          <include name="BTest3"/>
           <include name="BeforeTest"/>
-          <include name="ZTest1"/>
           <include name="AfterMethod"/>
           <include name="AfterSuite"/>
           <include name="BeforeSuite"/>

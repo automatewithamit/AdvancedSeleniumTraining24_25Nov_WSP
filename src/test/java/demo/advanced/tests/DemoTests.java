@@ -13,21 +13,21 @@ import demo.advanced.data.TestGroups;
 import demo.advanced.framework.CustomRetry;
 import demo.advanced.helpers.ExcelHelper;
 
-@Listeners(demo.advanced.framework.CustomListener.class)
+//@Listeners(demo.advanced.framework.CustomListener.class)
 public class DemoTests extends BaseTest {
 
 	@Parameters({ "dataFromParameter" })
 	@Test(priority = 3, groups = TestGroups.DemoGroup, 														 
 														 alwaysRun = true, 
-//																				 dataProvider = "getCustomerNameAgeData",
-//																				 dataProviderClass =
-//																				 DataProviders.class ,
+																				 dataProvider = "getNames",
+																				 dataProviderClass =
+																				 DataProviders.class ,
 																				 timeOut = 5000)
-	public void ZTest1(String parameter) {
+	public void ZTest1( String names) {
 		System.out.println("Executing Test 1");
 		Assert.assertTrue(true);
 		System.out.println("-------------------------");
-		System.out.println(parameter);
+		System.out.println(names);
 
 	}
 
@@ -39,11 +39,11 @@ public class DemoTests extends BaseTest {
 
 	}
 
-	@Test(priority = 2, groups = TestGroups.DemoGroup/*
-														 * , dataProvider = "getCustomerNameAgeData", dataProviderClass
-														 * = demo.advanced.data.DataProviders.class
-														 */)
-	public void BTest3(/* Object[][] data */) {
+	@Test(priority = 2, groups = TestGroups.DemoGroup
+														 , dataProvider = "getDataAsString", 
+														 dataProviderClass = demo.advanced.data.DataProviders.class
+														 )
+	public void BTest3() {
 		System.out.println("Executing Test 3");
 //		for (Object c : data) {
 //			System.out.println(c);
@@ -60,7 +60,7 @@ public class DemoTests extends BaseTest {
 
 	}
 
-	@Test(priority = 5, groups = TestGroups.DemoGroup)
+	@Test(priority = 5, groups = TestGroups.Sanity)
 	public void Test5() {
 		System.out.println("Executing Test 5");
 		Map<Integer, Object[]> data = new TreeMap<Integer, Object[]>();

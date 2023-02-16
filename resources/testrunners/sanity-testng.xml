@@ -6,10 +6,15 @@
 <suite thread-count="1" name="Sanity-Test-Suite" parallel="tests">
 
 	<test name="DemoTest" parallel="methods" thread-count="5">
+		<groups>
+			<run>
+				<include name="Sanity"></include>
+			</run>
+		</groups>
 		<parameter name="dataFromParameter" value="Value of data from Parameter" />
 		<classes>
 			<class name="demo.advanced.tests.DemoTests"></class>
-			
+
 			<!--<class name="demo.advanced.tests.AmazonTest"></class> -->
 			<class name="demo.advanced.tests.AmazonSearchTests"></class>
 		</classes>

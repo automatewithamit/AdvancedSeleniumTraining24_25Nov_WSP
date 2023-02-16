@@ -4,11 +4,24 @@
   <parameter name="configuration" value="config.properties"/>
   <parameter name="retry" value="2"/>
   <test thread-count="1" parallel="methods" name="DemoTest(failed)">
-    <parameter name="dataFromParameter" value="Value of data from Parameter"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="demo.advanced.tests.AmazonTest">
+        <methods>
+          <include name="WriteMobileNamesInExcel"/>
+          <include name="BeforeTest"/>
+          <include name="AfterMethod"/>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="BeforeClass"/>
+          <include name="AfterClass"/>
+          <include name="AfterTest"/>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- demo.advanced.tests.AmazonTest -->
       <class name="demo.advanced.tests.DemoTests">
         <methods>
-          <include name="ATest2"/>
+          <include name="BTest3"/>
           <include name="BeforeTest"/>
           <include name="AfterMethod"/>
           <include name="AfterSuite"/>

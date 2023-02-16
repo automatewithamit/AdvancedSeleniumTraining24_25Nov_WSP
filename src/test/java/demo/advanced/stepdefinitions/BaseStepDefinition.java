@@ -29,6 +29,7 @@ public class BaseStepDefinition {
 	
 	@Before
 	public void BeforeMethod() {
+		System.out.println("Before coming from Cucumber");
 		new DriverManager().startDriver(driverProperty);
 		DriverManager.getDriver().navigate().to("https://www.amazon.in");
 		System.out.println("Before Method..");
@@ -36,6 +37,7 @@ public class BaseStepDefinition {
 
 	@After
 	public void AfterMethod() {
+		System.out.println("After coming from Cucumber");
 		DriverManager.getDriver().quit();
 		System.out.println("After Method..");
 	}

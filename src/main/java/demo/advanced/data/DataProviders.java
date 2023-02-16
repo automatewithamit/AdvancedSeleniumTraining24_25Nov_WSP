@@ -4,19 +4,22 @@ import org.testng.annotations.DataProvider;
 
 public class DataProviders {
 
-//	@DataProvider(name = "getCustomerNameAgeData")
-//	public static Object[][] getCustomerNameAgeData() {
-//
-//		return new Object[][] { { new Customer("Amit Tripathi", 29), "Automation" },
-//				{ new Customer("Joe Biden", 30), "Developer" }, { new Customer("Atul Singh", 34), "QA" },
-//				{ new Customer("Piyush Saxena", 26), "Developer" } };
-//	}
-//	
-//	@DataProvider(name = "getConfiguration")
-//	public Object[][] getConfiguration() {
-//		String configuration = "This is Configurations";
-//		return new Object[] { configuration };
-//	}
+	@DataProvider(name = "getCustomerNameAgeData")
+	public static Object[][] getCustomerNameAgeData() {
+
+		return new Object[][] { { new Customer("Amit Tripathi", 29), "Automation" },
+				{ new Customer("Joe Biden", 30), "Developer" }, { new Customer("Atul Singh", 34), "QA" },
+				{ new Customer("Piyush Saxena", 26), "Developer" } };
+	}
+	
+	@DataProvider(name = "getNames")
+	public Object[] getNames() {
+		return new Object[] { "Automate","With","Amit" };
+	}
+	@DataProvider(name = "getDataAsString")
+	public Object[] getDataAsString() {
+		return new Object[] {"Automate"};
+	}
 
 }
 
